@@ -16,14 +16,16 @@ def stat_check():
         print("{} is already blocked.").format(website_domain_name)
         command = input("Press U to unblock\nPress B to remain blocked\n")
     if website_domain_name not in content:
-        print("Facebook is currently unblocked.")
+        print("{} is currently unblocked.").format(website_domain_name)
         command = input("Press B to block\nPress U to remain unlocked\n")
 
     if (command == "B") or (command == "b"):
         block_function()
+
     if (command == "U") or (command == "u"):
         unblock_function()
 
+#driver code
 host_file = r"/etc/hosts"
 redirect_ip = "127.0.0.1"
 website_domain_name = "www.facebook.com"
