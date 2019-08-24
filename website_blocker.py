@@ -3,7 +3,7 @@ def block_function():
     content = file.read()
     if website_domain_name not in content:
         file.write(redirect_ip + " " + website_domain_name + "\n" )
-    print("Status : Facebook is now blocked")
+    print("Status : {} is now blocked").format(website_domain_name)
 
 def unblock_function():
     file_reset = 250
@@ -13,7 +13,7 @@ def unblock_function():
 def stat_check():
     content = file.read()
     if website_domain_name in content:
-        print("Facebook is already blocked.")
+        print("{} is already blocked.").format(website_domain_name)
         command = input("Press U to unblock\nPress B to remain blocked\n")
     if website_domain_name not in content:
         print("Facebook is currently unblocked.")
@@ -29,6 +29,6 @@ redirect_ip = "127.0.0.1"
 website_domain_name = "www.facebook.com"
 with open(host_file,'r+') as file:
     content = file.read()
-    block_function()
-    unblock_function()
+    #block_function()
+    #unblock_function()
     stat_check()
