@@ -1,5 +1,5 @@
 import platform
-import string
+
 def block_function():
     content = file.read()
     if website_domain_name not in content:
@@ -12,6 +12,8 @@ def unblock_function():
     print("Status : Facebook is now unblocked")
 
 def stat_check():
+    """Function to check the status of the website"""
+
     content = file.read()
     if website_domain_name in content:
         print("{} is already blocked.").format(website_domain_name)
@@ -24,7 +26,8 @@ def stat_check():
     if (command == "B") or (command == "b"):
         block_function()
 
-    if (command == "U") or (command == "u"):
+    if (command == "U") or (command == "u"
+    ):
         unblock_function()
 
 #driver code
