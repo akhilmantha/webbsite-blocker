@@ -18,7 +18,7 @@ def stat_check():
         command = input("Press U to unblock\nPress B to remain blocked\n")
     if website_domain_name not in content:
         print("{} is currently unblocked.").format(website_domain_name)
-        command = string(input("Press B to block\nPress U to remain unlocked\n"))
+        command = input("Press B to block\nPress U to remain unlocked\n")
 
 
     if (command == "B") or (command == "b"):
