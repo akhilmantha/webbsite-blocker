@@ -1,5 +1,5 @@
 import platform
-
+import string
 def block_function():
     content = file.read()
     if website_domain_name not in content:
@@ -12,8 +12,6 @@ def unblock_function():
     print("Status : Facebook is now unblocked")
 
 def stat_check():
-    """Function to check the status of the website"""
-
     content = file.read()
     if website_domain_name in content:
         print("{} is already blocked.").format(website_domain_name)
@@ -37,5 +35,5 @@ website_domain_name = "www.facebook.com"
 with open(host_file,'r+') as file:
     content = file.read()
     #block_function()
-    #unblock_function()
+    unblock_function()
     stat_check()
