@@ -24,8 +24,7 @@ def stat_check():
     if (command == "B") or (command == "b"):
         block_function()
 
-    if (command == "U") or (command == "u"
-    ):
+    if (command == "U") or (command == "u"):
         unblock_function()
 
 #driver code
@@ -34,6 +33,6 @@ redirect_ip = "127.0.0.1"
 website_domain_name = "www.facebook.com"
 with open(host_file,'r+') as file:
     content = file.read()
-    #block_function()
+    block_function()
     unblock_function()
     stat_check()
