@@ -33,6 +33,6 @@ redirect_ip = "127.0.0.1"
 website_domain_name = "www.facebook.com"
 with open(host_file,'r+') as file:
     content = file.read()
-    block_function()
+    #block_function()
     unblock_function()
     stat_check()
